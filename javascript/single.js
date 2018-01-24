@@ -6,7 +6,7 @@
 
 
     var request = $.ajax({
-        url: 'http://api.tvmaze.com/shows/' + showId,
+        url: 'https://api.tvmaze.com/shows/' + showId,
         method: "GET",
         dataType: "json",
         data: {
@@ -25,7 +25,7 @@
         showName.text(name);
         var image;
         if (jsonMsg.image == null) {
-            image = 'http://via.placeholder.com/350x550'
+            image = 'https://via.placeholder.com/350x550'
         } else {
             image = jsonMsg.image.original;
         }

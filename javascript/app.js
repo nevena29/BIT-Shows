@@ -24,7 +24,7 @@ function searchSeries() {
 
 
     var request = $.ajax({
-        url: 'http://api.tvmaze.com/search/shows?q=' + searchButton,
+        url: 'https://api.tvmaze.com/search/shows?q=' + searchButton,
         method: "GET",
         dataType: "json"
     });
@@ -36,7 +36,7 @@ function searchSeries() {
             var id = jsonMsg[i].show.id;
             var image;
             if (jsonMsg[i].show.image == null) {
-                image = 'http://via.placeholder.com/350x550'
+                image = 'https://via.placeholder.com/350x550'
             } else {
                 image = jsonMsg[i].show.image.original;
             }
@@ -58,7 +58,7 @@ function searchSeries() {
 function popularShows() {
     var output = $(".row");
     var request = $.ajax({
-        url: 'http://api.tvmaze.com/shows',
+        url: 'https://api.tvmaze.com/shows',
         method: "GET",
         dataType: "json"
     });
